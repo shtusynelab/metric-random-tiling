@@ -1,0 +1,18 @@
+=== trunk W=4 (K=5) ===
+  W=4: |F0|=390626 sampled=5 head=41400
+    closure: |S|=804780 (+763380)
+    closure: |S|=4301068 (+3496288)
+    closure: |S|=8782016 (+4480948)
+Traceback (most recent call last):
+  File "~/audit_4612_tail.py", line 317, in <module>
+    main()
+  File "~/audit_4612_tail.py", line 312, in main
+    trunk_stage(Wt, Kt, workers=wk)
+  File "~/audit_4612_tail.py", line 249, in trunk_stage
+    d = confined_rate(W, 8, 2, K=K, verbose=True, internals=True,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/audit_4612_tail.py", line 92, in confined_rate
+    _rss_guard()
+  File "~/rth4612_tm.py", line 416, in _rss_guard
+    raise MemoryError(f"RSS guard: {rss:.1f} GB > {limit} GB budget")
+MemoryError: RSS guard: 23.0 GB > 20.0 GB budget

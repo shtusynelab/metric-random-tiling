@@ -1,0 +1,12 @@
+# Core scientific stack (all figure/counting scripts)
+numpy==2.4.6
+pandas==3.0.5
+matplotlib==3.11.1
+scipy==1.17.1
+Pillow==12.3.0
+mpmath==1.3.0
+
+# Optional:
+# - paramiko: only for the server-only drivers (marked in their docstrings)
+# - a C compiler with OpenMP (gcc -O3 -std=gnu11 -fopenmp): only for
+#   04_scripts_L2/disk/disk_count.c, the planar-disk production engine

@@ -1,0 +1,15 @@
+﻿alphabet,alphabet_values,Lx,Ly,F,E,method,Omega,lnOmega,lnOmega_per_F,n_states,seconds,status
+arithmetic,012,7,3,21,27,trace Tr(T^Lx),8407971,15.944691,0.759271,729,0.03,trace
+arithmetic,012,8,3,24,27,trace Tr(T^Lx),57790929,17.872342,0.744681,729,0.04,trace
+arithmetic,012,9,3,27,27,trace Tr(T^Lx),844304001,20.554023,0.76126,729,0.05,trace
+arithmetic,012,10,3,30,27,trace Tr(T^Lx),2839691697,21.766961,0.725565,729,0.05,trace
+arithmetic,012,11,3,33,27,trace Tr(T^Lx),20058699915,23.721929,0.718846,729,0.05,trace
+arithmetic,012,12,3,36,27,trace Tr(T^Lx),256616613483,26.270849,0.729746,729,0.06,trace
+arithmetic,012,13,3,39,27,trace Tr(T^Lx),1014157077891,27.645079,0.708848,729,0.07,trace
+arithmetic,012,14,3,42,27,trace Tr(T^Lx),7244353524081,29.611243,0.70503,729,0.08,trace
+arithmetic,012,15,3,45,27,trace Tr(T^Lx),83536109717757,32.0563,0.712362,729,0.08,trace
+arithmetic,012,16,3,48,27,trace Tr(T^Lx),372505069585041,33.551272,0.698985,729,0.11,trace
+arithmetic,012,17,3,51,27,trace Tr(T^Lx),2679947680462803,35.524574,0.69656,729,0.11,trace
+arithmetic,012,18,3,54,27,trace Tr(T^Lx),28384241166087519,37.88461,0.701567,729,0.17,trace
+arithmetic,012,19,3,57,27,trace Tr(T^Lx),139512972297975723,39.476934,0.692578,729,0.18,trace
+arithmetic,012,20,3,60,27,trace Tr(T^Lx),1009241787278884401,41.455731,0.690929,729,0.14,trace

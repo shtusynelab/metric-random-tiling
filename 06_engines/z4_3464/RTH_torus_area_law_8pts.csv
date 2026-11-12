@@ -1,0 +1,12 @@
+﻿type,L,Omega,lnOmega,sL,note
+count,2,128,4.85203,0.404336,torus trace k=2 (trace_sparse/trace_910 log); L2-4 == RTH_熵密度验证.csv
+count,3,1036,6.943122,0.385729,torus trace k=2 (trace_sparse/trace_910 log); L2-4 == RTH_熵密度验证.csv
+count,4,8800,9.082507,0.378438,torus trace k=2 (trace_sparse/trace_910 log); L2-4 == RTH_熵密度验证.csv
+count,5,86956,11.373158,0.379105,torus trace k=2 (trace_sparse/trace_910 log); L2-4 == RTH_熵密度验证.csv
+count,6,1114700,13.924096,0.38678,torus trace k=2 (trace_sparse/trace_910 log); L2-4 == RTH_熵密度验证.csv
+count,7,23325388,16.965053,0.40393,torus trace k=2 (trace_sparse/trace_910 log); L2-4 == RTH_熵密度验证.csv
+count,8,796865888,20.496197,0.427004,torus trace k=2 (trace_sparse/trace_910 log); L2-4 == RTH_熵密度验证.csv
+count,9,44571806560,24.520367,0.454081,torus trace k=2 (trace_sparse/trace_910 log); L2-4 == RTH_熵密度验证.csv
+prediction,10,,27.83,0.463833,registered lnOmega(10) candidates -> asymptote sL = lnOmega/(6L)
+prediction,10,,29.03,0.483833,registered lnOmega(10) candidates -> asymptote sL = lnOmega/(6L)
+count,10,4002790772868,29.017801,0.483630,torus trace k=2 (trace_10_resume3 log); L2-4 == RTH_熵密度验证.csv

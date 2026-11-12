@@ -1,0 +1,5 @@
+W,F,Omega,lnOmega,lnOmega_per_F,note
+W,8,6641,8.801018,1.100127,"4.8.8 Q(sqrt2) lattice exp; server TSQ_Lambda_DP.csv (W2 DFS=DP, W4 T-matrix trace exact)"
+W,18,563553,13.242017,0.735668,"4.8.8 Q(sqrt2) lattice exp; server TSQ_Lambda_DP.csv (W2 DFS=DP, W4 T-matrix trace exact)"
+W,32,52864817,17.783249,0.555727,"4.8.8 Q(sqrt2) lattice exp; server TSQ_Lambda_DP.csv (W2 DFS=DP, W4 T-matrix trace exact; 2026-09-29 clean rebuild dual-method confirmed: block-trace = sum(T2 o T2^T))"
+W,50,5291578368,22.389382,0.447788,"4.8.8 Q(sqrt2) lattice exp; W=5 Hutchinson 20000 probes x 8 seeds +/-1.14e5 (0.0022%), builder T_builder_v2 anchored W2 elem-wise / W3-W4 exact both libs / W5 int rehearsal = 3^20 exact (std 0); g(5)=1.5176, Delta_s(5)=0.00834"

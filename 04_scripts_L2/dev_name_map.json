@@ -1,0 +1,22 @@
+{
+  "RTH_torus_area_law_8pts.csv": "RTH_环面面积律八点.csv",
+  "SQ_entropy_density_verification.csv": "SQ_熵密度验证.csv",
+  "KAG_entropy_density_verification.csv": "KAG_熵密度验证.csv",
+  "P0_PM_torus_growth_forms.csv": "P0_PM_环面增长形态.csv",
+  "P0_PM_torus_trace_extension_Ly3.csv": "P0_PM_环面迹方法扩展_Ly3.csv",
+  "P0_PM_torus_trace_shape_classes_Ly2Ly3.csv": "P0_PM_环面迹方法形状类_Ly2Ly3.csv",
+  "P0_PM_torus_trace_shape_classes_Ly5.csv": "P0_PM_环面迹方法形状类_Ly5.csv",
+  "P0_D3_lowq_purification.csv": "P0_D3_低q净化.csv",
+  "P0_L1_orientation_statistics.csv": "P0_L1_取向统计.csv",
+  "P0_A3_55motif_statistics.csv": "P0_A3_55motif统计.csv",
+  "P0_M0_PDF_n78_decay_shape_curves.npz": "P0_M0_PDF_n78_衰减形态_curves.npz",
+  "P0_L1_halo_anisotropy.py": "P0_L1_弥散晕各向异性.py",
+  "P0_M0_PDF_three_reference.py": "P0_M0_PDF_三参照.py",
+  "P0_M0_PSI6_three_reference.py": "P0_M0_PSI6_三参照.py",
+  "P0_M0_three_reference_data.py": "P0_M0_三参照数据.py",
+  "KAG_numerical_verification.py": "KAG_数值验证.py",
+  "SQ_numerical_verification.py": "SQ_数值验证.py",
+  "RTH_numerical_verification.py": "RTH_数值验证.py",
+  "PEN_numerical_verification.py": "PEN_数值验证.py",
+  "TRI_numerical_verification.py": "TRI_数值验证.py"
+}

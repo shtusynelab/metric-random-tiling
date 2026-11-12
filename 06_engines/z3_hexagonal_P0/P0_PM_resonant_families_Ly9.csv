@@ -1,0 +1,4 @@
+Lx,Ly,alphabet,Omega,lnOmega,lnOmega_per_F,closed_form,excess_per_tile,method
+18,9,binary01,4144274827100357368,42.8683,0.2646,268435456,0.1448,"parallel DP, 40 workers, anchors passed"
+27,9,binary01,1075445280328072724893994810,62.2425,0.2561,137438953472,0.1506,"parallel DP, 40 workers, anchors passed"
+36,9,binary01,308008477964244299420516558126679400,81.7154,0.2522,70368744177664,0.1538,"parallel DP, 40 workers, anchors passed"

@@ -1,0 +1,7 @@
+﻿L,Omega,hits,n_samples,note
+2,,,,pending local DP
+2,83950.652,200000,200000,knuth-server(hit 100%)
+3,14928098,398358,480000,"knuth-server(hit 83%,s_ln 0.0025)"
+4,3727014900,102332,480000,knuth-server(s_ln 0.003)
+5,2324896200000,40424,2400000,knuth-server(s_ln 0.005)
+6,5023277500000000,5738,12000000,knuth-server(s_ln 0.013);48M 加密跑在跑

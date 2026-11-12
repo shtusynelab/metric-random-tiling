@@ -1,0 +1,89 @@
+{
+ "rth3464": {
+  "L": 6,
+  "E": 432,
+  "n_region_faces": 94,
+  "n_zero_rows": 213,
+  "kernel_dim": 4,
+  "basis_diag": [
+   {
+    "kind": "mixed",
+    "max_abs": 1,
+    "support": 24
+   },
+   {
+    "kind": "mixed",
+    "max_abs": 1,
+    "support": 24
+   },
+   {
+    "kind": "mixed",
+    "max_abs": 1,
+    "support": 36
+   },
+   {
+    "kind": "mixed",
+    "max_abs": 2,
+    "support": 30
+   }
+  ],
+  "n_unit_modes_found": 3,
+  "mode": {
+   "desc": "basis[0]",
+   "kind": "mixed",
+   "max_abs": 1,
+   "support_edges": 24
+  },
+  "flip": {
+   "base": 2,
+   "alphabet": [
+    1,
+    2,
+    3
+   ],
+   "patch_faces": 19,
+   "patch_census": {
+    "hex": 7,
+    "square": 12,
+    "tri": 0
+   },
+   "support_edges": 24,
+   "d1": 2,
+   "d2": 2,
+   "rho_per_cell": 0.25,
+   "s_lower_bound_per_face": 0.028881132523331052
+  }
+ },
+ "tsd31212": {
+  "L": 5,
+  "n_cls": 125,
+  "kernel_dim_full": 41,
+  "kernel_dim_region": 1,
+  "n_region_cls": 40,
+  "n_unit_modes_found": 1,
+  "mode": {
+   "desc": "basis[0]",
+   "kind": "mixed",
+   "max_abs": 1,
+   "support": 12
+  },
+  "flip": {
+   "alphabets_legal": [
+    {
+     "base": 2,
+     "alphabet": [
+      1,
+      2,
+      3
+     ]
+    }
+   ],
+   "support_classes": 12,
+   "d1": 3,
+   "d2": 2,
+   "rho_per_cell": 0.16666666666666666,
+   "s_lower_bound_per_face": 0.03850817669777474,
+   "mode_kind": "mixed"
+  }
+ }
+}

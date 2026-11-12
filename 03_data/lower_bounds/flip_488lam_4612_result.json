@@ -1,0 +1,105 @@
+{
+ "tsq488lam": {
+  "W": 6,
+  "E": 216,
+  "n_vars": 432,
+  "kernel_dim_region": 10,
+  "n_region_edges": 60,
+  "n_zero_rows": 312,
+  "basis_diag": [
+   {
+    "max_abs": 2,
+    "support": 8
+   },
+   {
+    "max_abs": 2,
+    "support": 8
+   },
+   {
+    "max_abs": 2,
+    "support": 8
+   },
+   {
+    "max_abs": 2,
+    "support": 8
+   },
+   {
+    "max_abs": 2,
+    "support": 16
+   },
+   {
+    "max_abs": 2,
+    "support": 16
+   },
+   {
+    "max_abs": 2,
+    "support": 8
+   },
+   {
+    "max_abs": 2,
+    "support": 8
+   },
+   {
+    "max_abs": 2,
+    "support": 16
+   },
+   {
+    "max_abs": 2,
+    "support": 16
+   }
+  ],
+  "mode": null
+ },
+ "rth4612": {
+  "Lx": 6,
+  "Ly": 6,
+  "N": 36,
+  "n_cls": 432,
+  "kernel_dim_region": 4,
+  "n_region_cls": 96,
+  "basis_diag": [
+   {
+    "kind": "mixed",
+    "max_abs": 1,
+    "support": 12
+   },
+   {
+    "kind": "mixed",
+    "max_abs": 1,
+    "support": 12
+   },
+   {
+    "kind": "mixed",
+    "max_abs": 1,
+    "support": 12
+   },
+   {
+    "kind": "mixed",
+    "max_abs": 1,
+    "support": 12
+   }
+  ],
+  "mode": {
+   "kind": "mixed",
+   "support": 12
+  },
+  "flip": {
+   "alphabets_legal": [
+    {
+     "base": 2,
+     "alphabet": [
+      1,
+      2,
+      3
+     ]
+    }
+   ],
+   "support_classes": 12,
+   "d1": 3,
+   "d2": 2,
+   "rho_per_cell": 0.16666666666666666,
+   "s_lower_bound_per_face": 0.01925408834888737,
+   "mode_kind": "mixed"
+  }
+ }
+}

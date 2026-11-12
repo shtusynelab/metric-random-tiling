@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code or dataset, please cite the paper and this archive."
+title: "Metric random tilings: exact entropy and the diffraction of counted disorder - code and data"
+authors:
+  - family-names: Wu
+    given-names: Xinyan
+  - family-names: Ji
+    given-names: Qingqing
+    orcid: "https://orcid.org/0000-0002-4131-9237"
+version: v1.2-arxiv1
+date-released: "2026-11-12"
+license: MIT
+repository-code: "https://github.com/shtusynelab/metric-random-tiling"
+abstract: "Exact counting, constructive certificates, ensemble generation and diffraction analysis for metric (edge-length) disorder on the eleven uniform tiling networks."
+keywords:
+  - random tilings
+  - metric disorder
+  - entropy
+  - diffraction
+  - counting algorithms

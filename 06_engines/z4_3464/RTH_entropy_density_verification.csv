@@ -1,0 +1,33 @@
+﻿对象,V,E,F,dim_R,dim_Q,备注
+square_4x4,16,32,16,8,8,
+honeycomb_2x2,8,12,4,6,6,dim=L^2+2 锚点
+honeycomb_3x3,18,27,9,11,11,dim=L^2+2 锚点
+honeycomb_4x4,32,48,16,18,18,dim=L^2+2 锚点
+RTH_3464_L2,24,48,24,7,7,dim=L^2+3 精确(Fraction L<=3 / mod-p+float L<=6)
+RTH_3464_L3,54,108,54,12,12,dim=L^2+3 精确(Fraction L<=3 / mod-p+float L<=6)
+RTH_3464_L4,96,192,96,19,19,dim=L^2+3 精确(Fraction L<=3 / mod-p+float L<=6)
+RTH_3464_L5,150,300,150,28,28,dim=L^2+3 精确(Fraction L<=3 / mod-p+float L<=6)
+RTH_3464_L6,216,432,216,39,39,dim=L^2+3 精确(Fraction L<=3 / mod-p+float L<=6)
+RTH_count_L2_k2,24,48,24,7,7,Omega=128;s_per_face=0.202168;subbox_|S|=7;subbox_bound=128
+RTH_count_L2_k3,24,48,24,7,7,Omega=2187;s_per_face=0.320429;subbox_|S|=7;subbox_bound=2187
+RTH_count_L3_k2,54,108,54,12,12,Omega=1036;s_per_face=0.128576;subbox_|S|=9;subbox_bound=512
+RTH_count_L4_k2,96,192,96,19,19,Omega=8800;s_per_face=0.094609;subbox_|S|=11;subbox_bound=2048
+33344_L2,16,40,24,5,5,dim 亚广延(零熵)
+33344_L3,36,90,54,7,7,dim 亚广延(零熵)
+33344_L4,64,160,96,9,9,dim 亚广延(零熵)
+33344_L5,100,250,150,11,11,dim 亚广延(零熵)
+TSQ31212_L2,24,36,12,14,11,"dim_R=F+2;dim_Q 线性(劈行致刚,零熵)"
+TSQ31212_L3,54,81,27,29,19,"dim_R=F+2;dim_Q 线性(劈行致刚,零熵)"
+TSQ31212_L4,96,144,48,50,29,"dim_R=F+2;dim_Q 线性(劈行致刚,零熵)"
+TSQ488_L2,16,24,8,10,8,"dim_R=F+2;dim_Q=4L(劈行致刚,零熵)"
+TSQ488_L3,36,54,18,20,12,"dim_R=F+2;dim_Q=4L(劈行致刚,零熵)"
+TSQ488_L4,64,96,32,34,16,"dim_R=F+2;dim_Q=4L(劈行致刚,零熵)"
+kagome_2x2,8,12,4,5,5,dim=Lq+Lr+gcd-1 定理锚点
+kagome_3x2,12,18,6,5,5,dim=Lq+Lr+gcd-1 定理锚点
+kagome_4x4,32,48,16,11,11,dim=Lq+Lr+gcd-1 定理锚点
+kagome_5x5,50,75,25,14,14,dim=Lq+Lr+gcd-1 定理锚点
+RTH_triangle_lock_L2,24,48,24,1,1,三角锁死:投影秩=1;G_tri=蜂巢图连通;20/20 整解锁死
+RTH_triangle_lock_L3,54,108,54,1,1,三角锁死:投影秩=1;G_tri=蜂巢图连通;20/20 整解锁死
+snub33336_k1,6,15,9,1,1,刚性:dim=1(共边三角锁死传播 ⟹ 全边同值标度);s=0
+snub33336_k2,24,60,36,1,1,刚性:dim=1(共边三角锁死传播 ⟹ 全边同值标度);s=0
+snub33336_k3,54,135,81,1,1,刚性:dim=1(共边三角锁死传播 ⟹ 全边同值标度);s=0

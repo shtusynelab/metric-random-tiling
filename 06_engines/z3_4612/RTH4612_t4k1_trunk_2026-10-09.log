@@ -1,0 +1,31 @@
+=== trunk W=4 (K=1) ===
+  W=4: |F0|=390626 sampled=1 head=5400
+    closure: |S|=98040 (+92640)
+    closure: |S|=622872 (+524832)
+    closure: |S|=1323600 (+700728)
+    closure: |S|=2028240 (+704640)
+    closure: |S|=2645640 (+617400)
+    closure: |S|=2830848 (+185208)
+    closure: |S|=2840160 (+9312)
+    closure: |S|=2840160 (+0)
+  W=4: closure n=2840160 nnz=86411904
+  W=4: killable 275616/2840160
+  W=4: confined-rate series (n, ln w_n/n):
+    n=   4  ln w_n/n = 5.631406
+    n=  24  ln w_n/n = 4.092862
+    n=  44  ln w_n/n = 3.981002
+    n=  64  ln w_n/n = 3.939868
+    n=  84  ln w_n/n = 3.918341
+    n= 104  ln w_n/n = 3.905095
+    n= 124  ln w_n/n = 3.896121
+    n= 144  ln w_n/n = 3.889641
+    n= 164  ln w_n/n = 3.884740
+    n= 184  ln w_n/n = 3.880905
+    n= 204  ln w_n/n = 3.877823
+    n= 224  ln w_n/n = 3.875290
+  W=4: tail-slope estimate rho_confined ~= 3.849459  (last point r=3.873568)
+  W=4: trunk 2840160/2840160 states; rho_trunk=46.967663 ln=3.849459; |lam| top: [46.9677 46.9677 46.9677 46.9677 46.9677 46.9677]
+  W=4 RIGOROUS LB: rate(4) >= ln rho_trunk = 3.849459  vs rate(2) <= 2.747205
+  per-face LB: 0.160394
+  *** PERIMETER LAW FALSIFIED at W=4 (binary 4.6.12) ***
+AUDIT DONE

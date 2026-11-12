@@ -1,0 +1,21 @@
+{
+ "W": 4,
+ "L": 4,
+ "m": 3000,
+ "n_states": 512,
+ "nnz": 900,
+ "est": 8788.044,
+ "sd": 695.9910952008411,
+ "stderr": 12.707000755474207,
+ "lnOmega": 9.081147440319459,
+ "lnOmega_err": 0.0014469882505139253,
+ "exact": 8800.0,
+ "registered": {
+  "lnOmega11_global_fit": 33.47,
+  "lnOmega11_second_diff": 33.99,
+  "lnOmega11_perimeter_frozen": 31.4,
+  "lnOmega11_early_perimeter_excluded": 25.2,
+  "accept_line": 33.0
+ },
+ "z_vs_exact": -0.9408986613028615
+}

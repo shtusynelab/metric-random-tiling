@@ -1,0 +1,66 @@
+{
+ "A_torus_dim_anchor": {
+  "L=2": {
+   "dim": 6,
+   "expect": 6,
+   "pass": true
+  },
+  "L=3": {
+   "dim": 11,
+   "expect": 11,
+   "pass": true
+  },
+  "L=4": {
+   "dim": 18,
+   "expect": 18,
+   "pass": true
+  },
+  "L=5": {
+   "dim": 27,
+   "expect": 27,
+   "pass": true
+  }
+ },
+ "B_window_compact_modes": {
+  "W=8": {
+   "n_edges": 223,
+   "kernel_dim_compact_modes": 36
+  },
+  "W=9": {
+   "n_edges": 278,
+   "kernel_dim_compact_modes": 49
+  }
+ },
+ "C_a_field": {
+  "2,5": 1,
+  "2,6": -1,
+  "3,4": -1,
+  "3,6": 1,
+  "4,4": 1,
+  "4,5": -1
+ },
+ "C_solve": {
+  "consistent": true,
+  "solution_space_dim": 0
+ },
+ "C_entries": {
+  "all_integers": true,
+  "max_abs": 1
+ },
+ "C_closure_recheck": {
+  "pass": true,
+  "fail_at": null
+ },
+ "D_flip_certificate": {
+  "n_faces_patch": 7,
+  "d1": 3,
+  "d2": 3,
+  "rho": 0.1111111111111111,
+  "s_lower_bound": 0.07701635339554948,
+  "support_edges": 12
+ },
+ "E_square_control": {
+  "W=8": 0,
+  "W=10": 0
+ }
+}

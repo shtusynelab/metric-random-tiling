@@ -1,0 +1,12 @@
+W,lib,omega,s_per_face,peak_states,t_s,note
+2,exp,6641,1.100127,8019,0.4,DFS=DP 对拍
+2,int,6561,1.098612,2187,0.2,anchor3^8=OK
+3,exp,563553,0.735668,898029,105.6,
+3,int,531441,0.732408,531441,30.3,anchor3^12=OK
+5,exp,,,"PREFLIGHT-REFUSED: face0 ~3^15x38=5.8e8 > cap 8e7 (b 实测标定 W=4 面0)"
+5,int,,,"PREFLIGHT-REFUSED: face0 ~3^15x38=5.8e8 > cap 8e7"
+6,exp,,,"PREFLIGHT-REFUSED: face0 ~3^18x38=5.2e10 > cap 8e7"
+6,int,,,"PREFLIGHT-REFUSED: face0 ~3^18x38=5.2e10 > cap 8e7"
+4,int,43046721,0.549306,14348907,3266.4,anchor3^16=OK
+4,exp,,,,26385.6,ABORTED: W=4 面16 值态 170347576 > 预算 150000000(fail-closed)
+4,exp,52864817,0.5557,1529631,146,T-matrix trace(T4) exact(谱方法取代 edge-DP)

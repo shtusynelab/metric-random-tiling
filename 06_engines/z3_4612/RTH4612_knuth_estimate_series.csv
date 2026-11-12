@@ -1,0 +1,31 @@
+# 4.6.12 Z-count Knuth tree-sampling series (full-orbit caliber; SI S8.2 / Table S11)
+#
+# COLUMN SEMANTICS
+#   Omega_gauge : MISLABEL (kept for column-order stability) — the value is the FULL
+#                 translation-orbit count Omega_full = 3 x E[X]. The estimator script writes
+#                 om_est = mean*3; its docstring states the correct relation
+#                 "Omega_total = 3*E[X]", but the script's own print labels are swapped
+#                 ("Omega(gauge)" holds the full-orbit value).
+#   Delta_ln    : naive s.d. of ln Omega_full (TOTAL, not per-hole); per-hole error =
+#                 Delta_ln / N_F. Heavy-tail caveat: the naive s.d. underestimates the true
+#                 uncertainty of this estimator family (cf. the 4.8.8 Lambda case); quoted
+#                 production errors are at this caliber.
+#   hit_rate    : fraction of samples reaching a verified complete leaf (the weighted
+#                 estimator is unbiased regardless; low hit_rate means wide tails).
+#
+# CALIBER FIX (2026-10-02, round C review): anchor re-runs with the final estimator
+#   (md5 38597a98fdb7ab17755be65c685d8a58; server copy identical) reproduce the exact
+#   full-orbit totals: L=1: 2346 vs 2349 (30000 samples); L=2: 2.971e7 vs 29 723 517
+#   (48000 samples; ln deviation -0.0005). Earlier readings of the L=3/L=4 rows as
+#   gauge-fixed values (x3 => 1.97e13 / 2.505e20, as printed in the mislabeled
+#   "Omega_total" log field) were WRONG; Table S11 Omega column and Fig. S13 were
+#   corrected to the values below. The s_Z series (ln Omega_full / N_F) was never affected.
+#
+# SEEDS: 20261001 + 7919*c per chunk (script default); samples pooled over chunks.
+L,samples,Omega_gauge_full_orbit,Delta_ln,hit_rate,seconds,status,note
+1,3000,432,0.006,1.00,7.4,superseded,intermediate estimator version (weight-bug fix only); kept for audit
+2,5000,73730,0.03,1.00,9.7,superseded,intermediate estimator version; kept for audit
+1,30000,2346,0.0001,1.00,15,anchor,final estimator; exact 2349 (ln dev -0.0013)
+2,48000,2.971e+07,0.0003,0.490,34,anchor,final estimator; exact 29723517 (ln dev -0.0005)
+3,160000,6.56623e+12,0.0005,0.0493,239.3,production,high-precision local 8-core
+4,1999760,8.351e+19,0.0084,0.000,668.3,production,server 140-core (script md5 identical to local)

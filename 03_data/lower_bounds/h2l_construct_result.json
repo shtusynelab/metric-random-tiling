@@ -1,0 +1,210 @@
+{
+ "constructions": {
+  "3": {
+   "L": 12,
+   "W": 3,
+   "n": 3,
+   "density": 0.08333333333333333,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "4": {
+   "L": 16,
+   "W": 4,
+   "n": 14,
+   "density": 0.21875,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "5": {
+   "L": 20,
+   "W": 5,
+   "n": 7,
+   "density": 0.07,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "6": {
+   "L": 24,
+   "W": 6,
+   "n": 33,
+   "density": 0.22916666666666666,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "7": {
+   "L": 28,
+   "W": 7,
+   "n": 16,
+   "density": 0.08163265306122448,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "8": {
+   "L": 32,
+   "W": 8,
+   "n": 60,
+   "density": 0.234375,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "9": {
+   "L": 36,
+   "W": 9,
+   "n": 29,
+   "density": 0.08950617283950617,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "10": {
+   "L": 40,
+   "W": 10,
+   "n": 95,
+   "density": 0.2375,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "11": {
+   "L": 44,
+   "W": 11,
+   "n": 46,
+   "density": 0.09504132231404959,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "12": {
+   "L": 48,
+   "W": 12,
+   "n": 138,
+   "density": 0.23958333333333334,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "13": {
+   "L": 52,
+   "W": 13,
+   "n": 67,
+   "density": 0.09911242603550297,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "14": {
+   "L": 56,
+   "W": 14,
+   "n": 189,
+   "density": 0.24107142857142858,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "15": {
+   "L": 60,
+   "W": 15,
+   "n": 92,
+   "density": 0.10222222222222223,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "16": {
+   "L": 64,
+   "W": 16,
+   "n": 248,
+   "density": 0.2421875,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "17": {
+   "L": 68,
+   "W": 17,
+   "n": 121,
+   "density": 0.1046712802768166,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "18": {
+   "L": 72,
+   "W": 18,
+   "n": 315,
+   "density": 0.24305555555555555,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "19": {
+   "L": 76,
+   "W": 19,
+   "n": 154,
+   "density": 0.10664819944598337,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "20": {
+   "L": 80,
+   "W": 20,
+   "n": 390,
+   "density": 0.24375,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "21": {
+   "L": 84,
+   "W": 21,
+   "n": 191,
+   "density": 0.1082766439909297,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "22": {
+   "L": 88,
+   "W": 22,
+   "n": 473,
+   "density": 0.24431818181818182,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "23": {
+   "L": 92,
+   "W": 23,
+   "n": 232,
+   "density": 0.10964083175803403,
+   "stripe_conditions": true,
+   "all_pairs": true
+  },
+  "24": {
+   "L": 96,
+   "W": 24,
+   "n": 564,
+   "density": 0.24479166666666666,
+   "stripe_conditions": true,
+   "all_pairs": true
+  }
+ },
+ "subsets": {
+  "3_9": {
+   "n": 2,
+   "ok": true
+  },
+  "4_8": {
+   "n": 6,
+   "ok": true
+  },
+  "5_15": {
+   "n": 4,
+   "ok": true
+  },
+  "6_10": {
+   "n": 12,
+   "ok": true
+  },
+  "7_21": {
+   "n": 10,
+   "ok": true
+  },
+  "8_12": {
+   "n": 14,
+   "ok": true
+  },
+  "9_27": {
+   "n": 14,
+   "ok": true
+  }
+ }
+}
