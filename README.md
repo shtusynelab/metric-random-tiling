@@ -7,7 +7,7 @@ Information, and the Reproducibility Supplement (RS v1.2) are included as
 PDFs under `01_paper/`; RS Table R2 is the authoritative file map for
 everything in this repository.
 
-Archived: Zenodo DOI [10.5281/zenodo.24156134](https://doi.org/10.5281/zenodo.24156134) (concept DOI; resolves to the release accompanying the paper).
+Archived: Zenodo DOI [10.5281/zenodo.24156133](https://doi.org/10.5281/zenodo.24156133) (concept DOI; resolves to the release accompanying the paper).
 
 Random metric disorder on the eleven Archimedean/Kagome-type edge networks:
 every tiling keeps one vertex type and one face type, the graph is fixed, and

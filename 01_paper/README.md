@@ -9,4 +9,4 @@
 The LaTeX source and the Markdown build sources are not distributed here;
 the paper is available on arXiv (link inserted at posting). The archived
 code/data snapshot carries Zenodo DOI
-[10.5281/zenodo.24156134](https://doi.org/10.5281/zenodo.24156134) (concept DOI).
+[10.5281/zenodo.24156133](https://doi.org/10.5281/zenodo.24156133) (concept DOI).
