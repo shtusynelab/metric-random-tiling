@@ -868,7 +868,7 @@ def main():
     fig.text(fx(CX[0] + 0.66), fy(ymid + 0.075), "roll up:", fontsize=6.8,
              ha='left', va='center', color='#333333')
     fig.text(fx(CX[0] + 0.66), fy(ymid - 0.075),
-             "glue $A$" + chr(8211) + "$A'", fontsize=6.8,
+             "glue A" + chr(8211) + "A'", fontsize=6.8,
              ha='left', va='center', color='#333333')
     # tube->ring horizontal arrow + two glue label lines (centered in the
     # gap band right above the arrow)
@@ -879,7 +879,7 @@ def main():
     fig.text(fx(CX[0] + 1.40), fy(RY1 + 0.48), "close:", fontsize=6.8,
              ha='center', va='center', color='#333333')
     fig.text(fx(CX[0] + 1.40), fy(RY1 + 0.33),
-             "glue $B$" + chr(8211) + "$B'", fontsize=6.8,
+             "glue B" + chr(8211) + "B'", fontsize=6.8,
              ha='center', va='center', color='#333333')
     # ---- c stacked (column 2, spans two rows; drawn first to set the
     #      area/mean color range) / b tile library (column 1, row 2) ----

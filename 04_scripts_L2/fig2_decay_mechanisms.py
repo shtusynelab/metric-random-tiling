@@ -8,7 +8,7 @@ s_bound = dim*ln k/N_F decay in lockstep (dim ker = Lq + Lr + gcd - 1)
 c row splitting (4.8.8): Q(sqrt2) lattice ensemble lnOmega/F vs W, riding
 on the Z baseline 2 ln 3 / W (subextensive)
 d rigid / rank-deficient: solution dimension vs L -- 2L+1 (3.3.3.4.4, [N])
-and the locked constants 2/1/0 (snub square / triangular). No area
+and the locked constants 2 (snub square) and 1 (triangular and snub hexagonal). No area
 reference (~L^2) guide line is drawn on purpose: extensivity only requires
 linear growth with N_F, and a fixed-slope reference line would suggest that
 one specific slope is required, which is misleading.
@@ -75,7 +75,7 @@ def img_inset(ax, path, rect=(0.60, 0.42, 0.38, 0.55)):
     return axin
 
 
-def main():
+def build_figure():
     fig = plt.figure(figsize=(7.2 / 6.1 * 6.30, 6.30))   # native ratio, height = Fig 1
     G = gs.GridSpec(2, 2, figure=fig, hspace=0.28, wspace=0.24,
                     left=0.080, right=0.975, top=0.975, bottom=0.075)
@@ -170,20 +170,15 @@ def main():
              label=r"3.3.3.4.4: $\dim = 2L{+}1$ [N]")
     axd.axhline(2, color="#5b8ec4", lw=0.9 * K, ls="-")
     axd.axhline(1, color="#2f6db0", lw=0.9 * K, ls="-")
-    axd.axhline(0, color="#999999", lw=0.9 * K, ls="-")
-    # line-name labels ride on the lines with white boxes masking them (text
-    # and line must not overlap). Baseline = line position - 0.40: the glyph
-    # ink center sits ~on the line position; the three lines are 1.0 units
-    # apart, less than the text line height, so adjacent labels must be
-    # offset in x (y=1 moved to the right) or they would stack vertically.
+    # The triangular and snub hexagonal tilings share the global scale.
+    # Offset the two labels horizontally so their white boxes do not overlap.
     for yy, xlab, lab, col in [(2, 20, r"3.3.4.3.4: 2", "#5b8ec4"),
-                               (1, 212, r"3.3.3.3.6: 1", "#2f6db0"),
-                               (0, 20, r"triangular: 0 ($\Omega = k$)", "#777777")]:
+                               (1, 155, r"triangular, 3.3.3.3.6: 1", "#2f6db0")]:
         axd.text(xlab, yy - 0.40, lab, fontsize=7 * K, color=col,
                  bbox=dict(boxstyle="square,pad=0.06", facecolor="white",
                            edgecolor="none"))
     axd.set_xlim(0, 400)
-    axd.set_ylim(-1.2, 20)     # relaxed bottom margin: the 0-line label box must fit inside
+    axd.set_ylim(-1.2, 20)
     axd.set_xticks([6, 100, 200, 300, 400])
     axd.set_xticklabels(["6", "100", "200", "300", "400"])
     axd.legend(fontsize=LEG_FS, frameon=False, loc="upper left")
@@ -193,7 +188,11 @@ def main():
     img_inset(axd, ASSETS / "elt_faces.png", (0.62, 0.16, 0.34, 0.50))
     plabel(axd, "d")
 
-    savefig(fig, str(FIGS / "fig2_decay_mechanisms"))
+    return fig
+
+
+def main():
+    savefig(build_figure(), str(FIGS / "fig2_decay_mechanisms"))
     print("saved", FIGS / "fig2_decay_mechanisms.{png,pdf}")
 
 

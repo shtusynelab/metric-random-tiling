@@ -1,3 +1,19 @@
+# Figures for manuscript v6.1.9
+
+| Figure | Published artwork |
+|---|---|
+| 1 | [fig1_model_classification.pdf](fig1_model_classification.pdf) |
+| 2 | [fig2_constraints_Codex_v61.pdf](fig2_constraints_Codex_v61.pdf) |
+| 3 | [fig3_honeycomb_metric_entropy.pdf](fig3_honeycomb_metric_entropy.pdf) |
+| 4 | [fig4_fixed_entropy_Codex_v61.pdf](fig4_fixed_entropy_Codex_v61.pdf) |
+| S1 | [S5_area_law_3464.pdf](S5_area_law_3464.pdf) |
+| S2 | [S6_4612_spectral.pdf](S6_4612_spectral.pdf) |
+| S3 | [S7_lower_bound_certificates.pdf](S7_lower_bound_certificates.pdf) |
+| S4 | [S4_resonance_sectors.pdf](S4_resonance_sectors.pdf) |
+| S5 | [S11_metric_tension_Codex_v61.pdf](S11_metric_tension_Codex_v61.pdf) |
+
+## Historical figure inventory
+
 # 02_figures/ -- figure manifest
 
 Delivered figure files. Regeneration pointers; the authoritative item-to-script map is Table R2 of the Reproducibility Supplement.

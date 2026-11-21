@@ -12,10 +12,10 @@ K = 10.82/7.205 after rendering, returning to 6-8 pt when printed at
        be comparable across blocks);
   row 2 b = ladder dual axis f_coh (sigma/mu, left) + I_halo/I_core (right,
        {1,2} not connected) /
-       c = anisotropy merge (S_perp/S_parallel per-k-window points +
-       window-mean squares, first window k=0.26 dropped -- it sits below the
+       c = anisotropy merge (S_perp/S_parallel per-kappa-window points +
+       window-mean squares, first window kappa=0.26 dropped -- it sits below the
        13x13 supercell fundamental shell 4pi/(sqrt3*d*13)=0.322 and carries
-       no independent mode; 10 windows k=0.34-1.06; diamonds = r halo shape
+       no independent mode; 10 windows kappa=0.34-1.06; diamonds = r halo shape
        ratio, spots csv) /
        d = w_rms(R) single source (21x21 production ensemble across all R,
        scheme b, cliff removed);
@@ -430,7 +430,7 @@ def main():
     axc.tick_params(labelsize=6.5)
     from matplotlib.lines import Line2D
     hnd = [Line2D([], [], marker="o", ls="none", ms=3.0, mfc="#9aa0a6",
-                  mec="none", alpha=0.5, label=r"per $k$-window"),
+                  mec="none", alpha=0.5, label=r"per $\kappa$-window"),
            Line2D([], [], marker="s", ls="none", ms=3.2, mfc="#bbbbbb",
                   mec="black", mew=0.5, label="mean"),
            Line2D([], [], marker="D", ls="none", ms=3.2, color="#555555",

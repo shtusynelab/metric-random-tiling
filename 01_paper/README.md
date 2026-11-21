@@ -1,12 +1,10 @@
-# Paper (PDF)
+# Metric random tilings: counted geometric disorder and its diffraction
 
-| File | Contents |
-|---|---|
-| `metric_random_tiling_letter_v2.14c.pdf` | the Letter (10 pages; manuscript v2.14c) |
-| `supplemental_information_v3.0c.pdf` | Supplementary Information, SI v3.0c (44 pages) |
-| `reproducibility_supplement_v1.3.pdf` | Reproducibility Supplement v1.3 — the authoritative file map (Table R2) for this repository |
+## Current manuscript (v6.1.9)
 
-The LaTeX source and the Markdown build sources are not distributed here;
-the paper is available on arXiv (link inserted at posting). The archived
-code/data snapshot carries Zenodo DOI
-[10.5281/zenodo.24156133](https://doi.org/10.5281/zenodo.24156133) (concept DOI).
+- [Letter](MRT_integrated_Codex_v61.pdf)
+- [Supplemental Material](MRT_integrated_Codex_v61_SI.pdf)
+- [Reproducibility Supplement](ReproducibilitySupplement_Codex_v61.pdf)
+- [Editable file map](ReproducibilitySupplement_Codex_v61.md)
+
+Earlier manuscript files in this directory are historical versions.

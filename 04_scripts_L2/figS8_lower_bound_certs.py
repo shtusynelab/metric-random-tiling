@@ -22,6 +22,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt   # noqa
 import numpy as np                # noqa
 from PIL import Image             # noqa
+from matplotlib.lines import Line2D  # noqa
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
@@ -39,7 +40,19 @@ PANELS = [
 
 
 def load(p):
-    return np.asarray(Image.open(p).convert('RGB'))
+    im = np.asarray(Image.open(p).convert('RGB'))
+    # trim the white margin so the tiling and its labels fill the panel
+    mask = np.any(im < 250, axis=2)
+    rows = np.any(mask, axis=1)
+    cols = np.any(mask, axis=0)
+    r0, r1 = np.where(rows)[0][[0, -1]]
+    c0, c1 = np.where(cols)[0][[0, -1]]
+    pad = 6
+    r0 = max(0, r0 - pad)
+    r1 = min(im.shape[0] - 1, r1 + pad)
+    c0 = max(0, c0 - pad)
+    c1 = min(im.shape[1] - 1, c1 + pad)
+    return im[r0:r1 + 1, c0:c1 + 1]
 
 
 def main():
@@ -57,9 +70,14 @@ def main():
         ax.set_axis_off()
         ax.text(0.0, 1.03, k, transform=ax.transAxes, fontsize=8,
                 fontweight='bold', va='bottom', ha='left')
-    fig.subplots_adjust(left=0.015, right=0.985, bottom=0.015, top=0.952,
+    fig.subplots_adjust(left=0.015, right=0.985, bottom=0.10, top=0.952,
                         wspace=0.04, hspace=0.16)
-    out = FIGS / 'S8_lower_bound_certificates'
+    col = {1: '#1f77b4', 2: '#8c8c8c', 3: '#d62728'}
+    handles = [Line2D([0], [0], color=col[x], lw=3) for x in (1, 2, 3)]
+    fig.legend(handles, ['edge length 1', 'edge length 2', 'edge length 3'],
+               loc='lower center', bbox_to_anchor=(0.5, 0.01), ncol=3,
+               fontsize=7.5, frameon=False)
+    out = FIGS / 'S7_lower_bound_certificates'
     fig.savefig(out.with_suffix('.png'), dpi=300)
     fig.savefig(str(out) + '.pdf')
     print('written:', out.with_suffix('.png'),

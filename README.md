@@ -1,26 +1,15 @@
-# Metric random tilings: exact entropy and the diffraction of counted disorder
+# Metric random tilings: counted geometric disorder and its diffraction
 
-Code, data, and figure release for the paper *Metric random tilings: exact
-entropy and the diffraction of counted disorder* (Xinyan Wu, Qingqing Ji;
-arXiv link to be inserted at submission). The Letter, its Supplementary
-Information, and the Reproducibility Supplement (RS v1.2) are included as
-PDFs under `01_paper/`; RS Table R2 is the authoritative file map for
-everything in this repository.
+Code, data and figures for the Letter by Xinyan Wu and Qingqing Ji. The [manuscript index](01_paper/README.md) links the current Letter, Supplemental Material and Reproducibility Supplement (v6.1.9). The [figure index](02_figures/README_manifest.md) maps Figs. 1–4 and S1–S5 to the released artwork.
 
-Archived: Zenodo DOI [10.5281/zenodo.24156133](https://doi.org/10.5281/zenodo.24156133) (concept DOI; resolves to the release accompanying the paper).
-
-Random metric disorder on the eleven Archimedean/Kagome-type edge networks:
-every tiling keeps one vertex type and one face type, the graph is fixed, and
-the *edge lengths* fluctuate under exact per-face closure constraints. The
-scripts count configurations exactly, certify constructive entropy lower
-bounds, sample value-domain ensembles, and compute exact structure factors.
+Archive concept DOI: [10.5281/zenodo.24156133](https://doi.org/10.5281/zenodo.24156133).
 
 ## Layout
 
 | Folder | Contents |
 |---|---|
 | `01_paper/` | the Letter, SI, and Reproducibility Supplement as PDFs |
-| `02_figures/` | all delivered figures (PDF + PNG, S1–S11 and Fig. 1–4) with rendering assets |
+| `02_figures/` | all delivered figures (PDF + PNG, current and historical figure sets) with rendering assets |
 | `03_data/` | delivered data: `uniform/` (ensembles, structure factors, exact counts, NPZ raw configurations), `lower_bounds/` (certificate records) |
 | `04_scripts_L2/` | paper-level scripts: one script per figure, the value-domain suite (`vd_*`), SI data generators, constructive-certificate checkers (`flip_*`, `h2l_*`), shared style, and `paths_common.py` (see below) |
 | `05_predecessor_assets/` | shared pattern-asset generators (Fig. 1/2 input art) |
@@ -30,7 +19,7 @@ bounds, sample value-domain ensembles, and compute exact structure factors.
 
 ```bash
 pip install -r requirements.txt
-# SI Fig. S11 data + figure (exact enumeration, seconds per point):
+# historical entropy-split data + figure (exact enumeration, seconds per point):
 python 04_scripts_L2/si_data.py
 python 04_scripts_L2/fig_si_entropy_split.py
 # official small-torus anchors (affine invariance, brute-force cross-checks):
@@ -48,7 +37,7 @@ to the development originals (byte-identical, only names changed).
 
 | Folder | Network | Character |
 |---|---|---|
-| `z3_hexagonal_P0` | honeycomb (3.6.3.6) | the positive-entropy carrier; exact traces, TM spectra, shape classes |
+| `z3_hexagonal_P0` | honeycomb (6.6.6) | the positive-entropy carrier; exact traces, TM spectra, shape classes |
 | `z3_31212` | 3.12.12 | mid-system positive entropy, TM ladder |
 | `z3_4612` | 4.6.12 | perimeter-law falsification, strict width rates |
 | `z3_488` | 4.8.8 | ℤ zero entropy / ℝ extensivity, Λ-library counts |
@@ -63,12 +52,11 @@ Each main/SI figure has one generating script in `04_scripts_L2/` (map in RS
 Table R2). Figures are rendered from delivered data by default; regenerating
 raw ensembles needs the sampler drivers (`vd_torus_run*.py`, server-scale)
 and the exact-uniform suite (`vd_suite3.py`, `vd_patch.py`). The constructive
-certificates of SI S8.3 re-verify in seconds-to-minutes via `flip_*.py` /
+certificates of SI S3 re-verify in seconds-to-minutes via `flip_*.py` /
 `h2l_*.py` (records land in `03_data/lower_bounds/`, matching the delivered
 JSONs bit-for-bit).
 
 ## License
 
-Code and datasets: MIT — see `LICENSE`. The paper PDFs in `01_paper/` are
-distributed under their arXiv license. If you use this code or data,
+Code and datasets: MIT — see `LICENSE`.  If you use this code or data,
 please cite the paper.
