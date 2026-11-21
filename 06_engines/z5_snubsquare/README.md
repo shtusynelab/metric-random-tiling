@@ -21,12 +21,6 @@ reading).
   acceptance (7 torus sizes, all pass; checker `snub_square_rigidity_check.py`)
   + English SI draft.
 - `snub_holonomy_check.py` -- holonomy consistency check.
-- `SNB_metric_two_parameter_family_demo.png/.pdf` -- full solution-family demo:
-  a/b = 0.75 / 1.00 / 1.33, edges colored by rhombus class (blue = class I
-  edge length a, red = class II edge length b) -- a direct visualization of the
-  dim = 2 solution space (the only degrees of freedom are the two class
-  scalings; panel b is the regular solution). Demo rendering script not
-  distributed with this release.
 
 ## Comparison (the three z = 5 cyclic orders)
 

@@ -40,8 +40,6 @@ figures.
 - `P0_L1_halo_anisotropy.py` and `P0_M0_PDF_three_reference.py` -- modules used
   by the paper-level suite in `04_scripts_L2/` (halo anisotropy; pair-
   distribution reference curves).
-- `_archive_deprecated_routes/` -- superseded counting routes kept for
-  reference.
 
 ## Quickstart
 

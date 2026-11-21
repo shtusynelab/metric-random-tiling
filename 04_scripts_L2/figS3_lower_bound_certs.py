@@ -77,7 +77,7 @@ def main():
     fig.legend(handles, ['edge length 1', 'edge length 2', 'edge length 3'],
                loc='lower center', bbox_to_anchor=(0.5, 0.01), ncol=3,
                fontsize=7.5, frameon=False)
-    out = FIGS / 'S7_lower_bound_certificates'
+    out = FIGS / 'S3_lower_bound_certificates'
     fig.savefig(out.with_suffix('.png'), dpi=300)
     fig.savefig(str(out) + '.pdf')
     print('written:', out.with_suffix('.png'),

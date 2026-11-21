@@ -33,5 +33,3 @@
 - `KAG_numerical_verification.py` + `KAG_entropy_density_verification.csv` -- 
   four-layer numerical verification (brute-force anchors / nullity table +
   symbol factorization / exact Omega series / strip series).
-- `kagome_real_demo.py` + `KAG_real_metric_random_solution_demo.png/.pdf` -- 
-  real-metric random solution demo.

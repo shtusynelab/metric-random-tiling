@@ -192,7 +192,7 @@ def build_figure():
 
 
 def main():
-    savefig(build_figure(), str(FIGS / "fig2_decay_mechanisms"))
+    savefig(build_figure(), str(FIGS / "fig2_constraints"))
     print("saved", FIGS / "fig2_decay_mechanisms.{png,pdf}")
 
 

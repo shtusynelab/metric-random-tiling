@@ -27,6 +27,3 @@ window size across the delivered width series. Determination record:
   (`T_builder_v2.py`, exact trace counters, Hutchinson cross-checks,
   reduced-component and branch-bound utilities).
 - `roundE_488_knuth.py` -- Knuth estimator cross-check.
-- Vendored demo: `tsq_488_real_demo.py` rendering
-  `TSQ_real_metric_random_solution_demo.png/.pdf` (real-metric random
-  solution sampling on the 4.8.8 network).

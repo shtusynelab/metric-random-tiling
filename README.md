@@ -9,7 +9,7 @@ Archive concept DOI: [10.5281/zenodo.24156133](https://doi.org/10.5281/zenodo.24
 | Folder | Contents |
 |---|---|
 | `01_paper/` | the Letter, SI, and Reproducibility Supplement as PDFs |
-| `02_figures/` | all delivered figures (PDF + PNG, current and historical figure sets) with rendering assets |
+| `02_figures/` | all delivered figures (PDF + PNG, Figs. 1–4 and S1–S5) with rendering assets |
 | `03_data/` | delivered data: `uniform/` (ensembles, structure factors, exact counts, NPZ raw configurations), `lower_bounds/` (certificate records) |
 | `04_scripts_L2/` | paper-level scripts: one script per figure, the value-domain suite (`vd_*`), SI data generators, constructive-certificate checkers (`flip_*`, `h2l_*`), shared style, and `paths_common.py` (see below) |
 | `05_predecessor_assets/` | shared pattern-asset generators (Fig. 1/2 input art) |
@@ -19,9 +19,6 @@ Archive concept DOI: [10.5281/zenodo.24156133](https://doi.org/10.5281/zenodo.24
 
 ```bash
 pip install -r requirements.txt
-# historical entropy-split data + figure (exact enumeration, seconds per point):
-python 04_scripts_L2/si_data.py
-python 04_scripts_L2/fig_si_entropy_split.py
 # official small-torus anchors (affine invariance, brute-force cross-checks):
 python 06_engines/z3_hexagonal_P0/edge_alphabet_affine_check.py
 python 06_engines/z3_hexagonal_P0/edge_alphabet_binary_check.py

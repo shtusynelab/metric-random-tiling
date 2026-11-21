@@ -43,7 +43,7 @@ One row per (alphabet, torus size): alphabet tags `12`, `123`, `124` (i.e.
 {1,2}, {1,2,3}, {1,2,4}) over nine (Lx, Ly) torus sizes from 2x2 to 6x3
 (20 rows). Columns: `alpha`, `Lx`, `Ly`, `F`, `E` (E = 3F asserted),
 `omega` (exact count), `ln_Omega`, `H_comp`, `H_cond` with
-ln Omega = H_comp + H_cond (the Fig. S11 entropy split), per-face variants
+ln Omega = H_comp + H_cond, per-face variants
 `H_comp_per_F` / `H_cond_per_F`, and `n_comp`, `secs` run metadata.
 
 ### disk_counts_exact.csv
@@ -96,7 +96,7 @@ h-scan variants `torus13_a123_h+/-0.15` / `+/-0.30`, with sampler metadata),
 `pdf_decay_suite.csv`, `pdf_curves_suite.npz`, `slq_suite.csv`,
 `slq_profiles_suite.npz`, `halo_orient_suite.csv`,
 `halo_orient_lock_suite.csv` -- value-domain suite series; see RS Table R2
-(Table S7 row).
+(field-dependent diffraction measurements, Table R6).
 
 ## lower_bounds/
 

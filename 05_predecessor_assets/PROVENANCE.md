@@ -1,2 +1,3 @@
-# Provenance of collected predecessor assets
-- `gen_tilings.py`: collected from the development tree `L1_概念论文/scripts/03_shared_libs/gen_tilings.py`, md5 = da7d98ce599814cd77e332a7330deba1; required by `gen_G_batch2.py` and `gen_G_pieces.py` (LozengeTiling generator). The pack audit (2026-11-09, §7) lists it as the P0 missing module; version identical to the copy referenced by the 2026-10-09 L1 v4.4 snapshot.
+# Shared artwork generators
+
+These generators produce the lozenge and polygon assets used in the current figure set. The lozenge routines in `gen_G_batch2.py` and `gen_G_pieces.py` use `gen_tilings.py`. See [Table R2](../01_paper/Reproducibility_Supplement.md) for the mapping to individual figures.

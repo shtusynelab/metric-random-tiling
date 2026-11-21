@@ -26,14 +26,6 @@ dimension series + vertex-type census).
 
 ## Files
 
-- `ELT_real_metric_random_solution_demo.png/.pdf` -- metric random solution
-  demo (R-layer solution-space sampling; patch kernel dimension 6, consistent
-  with the sub-extensive count; closure residual ~1e-16; demo rendering script
-  not distributed with this release). The visible degrees of freedom are the
-  independent heights of the square rows plus one global width (triangle rows
-  lock the width; the rectangles' top and bottom edges belong to two different
-  triangle rows, transmitting the width globally) -- a direct visualization of
-  the sub-extensive "strip residual".
 
 ## Related
 

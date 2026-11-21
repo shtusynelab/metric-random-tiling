@@ -26,9 +26,6 @@ alphabets cannot reach them.
 
 - `TSD_31212split_row_rigidity_theorem.md` -- theorem statement and mechanism
   proof skeleton.
-- `TSQ31212_real_metric_random_solution_demo.png/.pdf` -- metric random
-  solution demo (R-layer solution-space sampling; closure residual ~1e-16;
-  demo rendering script not distributed with this release).
 - Numerical verification (housed in `z4_3464/`):
   `z4_3464/RTH_numerical_verification.py`, part 6 (`build_31212`: asserts
   dim_R = 3 L^2 + 2, dim_Q linearity, vertex-type census).

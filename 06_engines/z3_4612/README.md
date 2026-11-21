@@ -6,7 +6,7 @@ transfer matrix and by Knuth tree sampling. Delivered result: the naive binary
 perimeter law on this network is falsified, and strict positive width rates
 are established -- exact transfer-matrix lower bounds against Knuth-sampling
 upper bounds pin the width-rate constants (asserted as constants in
-`04_scripts_L2/figS7_4612_spectral.py`, which renders Fig. S7).
+`04_scripts_L2/figS2_4612_spectral.py`, which renders Fig. S2).
 
 ## Key files
 
@@ -30,7 +30,6 @@ upper bounds pin the width-rate constants (asserted as constants in
   `ansatz_diagnostics.py`, `plot_sZ_1overL.py`.
 - `dev_calibrations/` -- Hutchinson estimator calibration JSONs
   (`hutch_locW2_result.json` ... `hutch_locW8_result.json`).
-- `TTH4612_lnOmega.png/.pdf` -- ln Omega vs N_F overview plot.
 - Dated determination / audit records (`RTH4612_*_adjudication*.md`,
   `RTH4612_constraint_matrix_layer_results_2026-10-01.md`,
   `RTH4612_pinning_splice_theorem_derivation.md`, task logs) are the historical

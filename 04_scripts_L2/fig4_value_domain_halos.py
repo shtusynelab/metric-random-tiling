@@ -552,7 +552,43 @@ def main():
     panel_label(axf, "f")
     panel_label(axg, "g")
     scale_fig(fig, K)
-    savefig(fig, str(FIGS / "fig4_value_domain_halos"))
+    # Export the two panel groups on separate pages at their published scale.
+    from io import BytesIO
+    import pymupdf
+    buffer = BytesIO()
+    fig.savefig(buffer, format="pdf", bbox_inches="tight")
+    plt.close(fig)
+    for supplement, stem in [(False, "fig4_fixed_entropy"), (True, "S5_metric_tension")]:
+        with pymupdf.open(stream=buffer.getvalue(), filetype="pdf") as source:
+            page = source[0]
+            labels = {}
+            for x0, y0, x1, y1, word, *_ in page.get_text("words"):
+                if word in ("e", "f", "g") and 297 < y0 < 299:
+                    labels[word] = pymupdf.Rect(x0, y0, x1, y1)
+                if supplement and y0 < 297 and y1 > 295:
+                    page.add_redact_annot(pymupdf.Rect(x0+.1,y0+1,x1-.1,y1-1), fill=False)
+            assert set(labels) == set("efg"), "Panel layout has changed"
+            if not supplement:
+                for box in labels.values():
+                    page.add_redact_annot(pymupdf.Rect(box.x0+.1, box.y0+1, box.x1-.1, box.y1-1), fill=False)
+            page.apply_redactions(images=0, graphics=0)
+            clip = pymupdf.Rect(0, 296 if supplement else 0, page.rect.width,
+                                page.rect.height if supplement else 307)
+            with pymupdf.open() as out:
+                sheet = out.new_page(width=clip.width, height=clip.height)
+                sheet.show_pdf_page(sheet.rect, source, 0, clip=clip)
+                if supplement:
+                    tags = {w[4]: pymupdf.Rect(w[:4]) for w in sheet.get_text("words")
+                            if w[4] in ("e","f","g") and w[1] < 5}
+                    assert set(tags) == set("efg")
+                    for box in tags.values():
+                        sheet.add_redact_annot(box, fill=False)
+                    sheet.apply_redactions(images=0, graphics=0)
+                    for old, new in zip("efg", "abc"):
+                        box = tags[old]
+                        sheet.insert_text((box.x0, box.y1-2.5), new, fontname="hebo", fontsize=12)
+                out.save(FIGS / (stem + ".pdf"), garbage=4, deflate=True)
+                sheet.get_pixmap(matrix=pymupdf.Matrix(2,2)).save(FIGS / (stem + ".png"))
 
 if __name__ == "__main__":
     main()

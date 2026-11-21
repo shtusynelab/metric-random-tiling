@@ -82,7 +82,3 @@ supersede any intermediate readings in this file.
   `thick_crit_numerics.py` -- diagnostics and demos (integer-alphabet random
   tiling, thinness diagnostics).
 - `snub_lib.py` -- snub hexagonal torus construction and nullity counts.
-- `RTH_area_law_9pts_fit.png/.pdf` -- ln Omega nine-point fit figure with the
-  s*L curve (out-of-sample hits marked).
-- `RTH_integer_alphabet_random_tiling_demo.png/.pdf` -- integer-alphabet
-  random tiling demo.
