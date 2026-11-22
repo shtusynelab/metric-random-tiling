@@ -4,6 +4,8 @@ Code, data and figures for the Letter by Xinyan Wu and Qingqing Ji. The [manuscr
 
 Archived on Zenodo: concept DOI [10.5281/zenodo.24156133](https://doi.org/10.5281/zenodo.24156133), latest version DOI [10.5281/zenodo.24432803](https://doi.org/10.5281/zenodo.24432803) (v6.1.9).
 
+The current manuscript numbers the constructive certificates, 3.4.6.4 counts and 4.6.12 rates as Figs. S1, S2 and S3, respectively. In the fixed Zenodo v6.1.9 snapshot these figures are S3, S1 and S2.
+
 ## Layout
 
 | Folder | Contents |
@@ -49,7 +51,7 @@ Each main/SI figure has one generating script in `04_scripts_L2/` (map in RS
 Table R2). Figures are rendered from delivered data by default; regenerating
 raw ensembles needs the sampler drivers (`vd_torus_run*.py`, server-scale)
 and the exact-uniform suite (`vd_suite3.py`, `vd_patch.py`). The constructive
-certificates of SI S3 re-verify in seconds-to-minutes via `flip_*.py` /
+certificates of SI S2 re-verify in seconds-to-minutes via `flip_*.py` /
 `h2l_*.py` (records land in `03_data/lower_bounds/`, matching the delivered
 JSONs bit-for-bit).
 

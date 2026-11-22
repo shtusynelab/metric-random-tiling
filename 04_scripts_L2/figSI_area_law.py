@@ -6,7 +6,7 @@ b) local log-log slope dln(lnOmega)/dln(n_F) vs L (chord slope, computed
    from the CSV): rises monotonically from 0.44 to 0.76 -> asymptote 1
    (area term bL^2 dominates); at small L the low-order terms (constant +
    perimeter) dominate with slope ~ 1/2, visualising the crossover.
-Output: <FIGURES>/S1_area_law_3464.{png,pdf}
+Output: <FIGURES>/S2_area_law_3464.{png,pdf}
 """
 import math
 import sys
@@ -71,7 +71,7 @@ def main():
     d = tr[tr.type == 'count']
     print('[QA] sL L=2/9:', float(d[d.L == 2].sL.iloc[0]),
           float(d[d.L == 9].sL.iloc[0]), flush=True)
-    savefig(fig, str(FIGS / "S1_area_law_3464"))
+    savefig(fig, str(FIGS / "S2_area_law_3464"))
 
 
 if __name__ == "__main__":

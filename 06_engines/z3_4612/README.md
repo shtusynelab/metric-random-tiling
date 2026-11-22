@@ -6,7 +6,7 @@ transfer matrix and by Knuth tree sampling. Delivered result: the naive binary
 perimeter law on this network is falsified, and strict positive width rates
 are established -- exact transfer-matrix lower bounds against Knuth-sampling
 upper bounds pin the width-rate constants (asserted as constants in
-`04_scripts_L2/figS2_4612_spectral.py`, which renders Fig. S2).
+`04_scripts_L2/figS3_4612_spectral.py`, which renders Fig. S3).
 
 ## Key files
 

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""4.6.12 Fig. S7, two panels (a: ternary Z-count lnOmega vs N_F; b: TM
+"""4.6.12 Fig. S3, two panels (a: ternary Z-count lnOmega vs N_F; b: TM
 spectral-rate adjudication).
 
 Panel a (ternary {1,2,3}, LxL torus, N_F = 6L^2, full-orbit convention):
@@ -23,7 +23,7 @@ criterion direction flips - the per-face convention lambda/(6W) is required.
 Rate values from z3_4612/RTH4612_metric_entropy_TM_readjudication_2026-10-06.md
 (final adjudicated values; the intermediate RTH4612_tm_lambda.csv holds only
 the W=2 row, so the W=3 value follows the adjudication document).
-Output: <FIGURES>/S2_4612_spectral.{png,pdf}
+Output: <FIGURES>/S3_4612_spectral.{png,pdf}
 """
 import io
 import math
@@ -194,7 +194,7 @@ print(f"[QA] slope/width: W2-3 {RATE3_LB-RATE2:.4f}, W2-4 "
       f"{(RATE4_LB-RATE2)/2:.4f} (ref s2(inf) ~ 0.09-0.10)", flush=True)
 
 fig.subplots_adjust(left=0.075, right=0.985, bottom=0.13, top=0.86, wspace=0.30)
-outs = [str(PC.FIGURES / 'S2_4612_spectral.png')]
+outs = [str(PC.FIGURES / 'S3_4612_spectral.png')]
 for out in outs:
     fig.savefig(out, dpi=300)
     fig.savefig(out.replace('.png', '.pdf'))
