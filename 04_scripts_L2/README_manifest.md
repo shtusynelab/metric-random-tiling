@@ -12,3 +12,5 @@ See [the current figure index](../02_figures/README_manifest.md) and [Table R2](
 | S2 | [figSI_area_law.py](figSI_area_law.py) |
 | S3 | [figS3_4612_spectral.py](figS3_4612_spectral.py) |
 | S4 | [gen_SI_figs.py](gen_SI_figs.py) |
+| Replication (SI S6.1-S6.2, Table R6) | [vd_repchains.py](vd_repchains.py) |
+| Mixing diagnostic (SI S6.1) | [ess_pilot.py](ess_pilot.py) + [ess_tau.py](ess_tau.py) |

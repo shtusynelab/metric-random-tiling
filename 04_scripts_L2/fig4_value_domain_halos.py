@@ -24,7 +24,7 @@ K = 10.82/7.205 after rendering, returning to 6-8 pt when printed at
        vs r=4/26.8; +/-0.15 edge-length strong mixing keeps the metric
        randomness visible) /
        f = m(h) + Delta s(h) dual axis /
-       g = phason response f_coh(h) + I_halo/I_core(h).
+       g = tension response f_coh(h) + I_halo/I_core(h).
 Data: ../data/uniform/ (f_coh uses the *_ref columns, convention in SI S9;
 w_rms single-source table wrms_curve_tor21.csv; e reads
 raw/torus13_a123_h+/-0.15.npz).
@@ -516,7 +516,7 @@ def main():
     ax2.set_ylabel(r"$\Delta s$ ($k_B$ per face)", color="#a03020", labelpad=1)
     ax2.tick_params(labelsize=6.5, colors="#a03020")
 
-    # ---- g: phason response ----
+    # ---- g: tension response ----
     axg = fig.add_axes([fx(XB[2]), fy(EY), fx(BW3), fy(EH)])
     _fcv = np.maximum(fcol(d, "f_coh"), 1e-6)
     _hcv = np.maximum(d.halo_core, 1e-2)
@@ -541,7 +541,7 @@ def main():
     axg.set_yscale("log")
     axg.legend(fontsize=5.6, frameon=False)
     axg.set_xlabel(r"tension $h$")
-    axg.set_ylabel("phason response", labelpad=1)
+    axg.set_ylabel("tension response", labelpad=1)
     axg.tick_params(labelsize=6.5)
 
     panel_label(ax_a, "a", dy=0.965)

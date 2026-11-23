@@ -1,4 +1,6 @@
-# Figures for manuscript v6.1.9
+# Figures for manuscript v6.2.3
+
+(v6.2.3 changes: Fig. 1c label s2^fit; Fig. S5g label tension response; Fig. 4 regenerated from the same script.)
 
 | Figure | Published artwork |
 |---|---|

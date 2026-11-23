@@ -1,6 +1,6 @@
 # Metric random tilings: counted geometric disorder and its diffraction
 
-Code, data and figures for the Letter by Xinyan Wu and Qingqing Ji. The [manuscript index](01_paper/README.md) links the current Letter, Supplemental Material and Reproducibility Supplement (v6.1.9). The [figure index](02_figures/README_manifest.md) maps Figs. 1–4 and S1–S5 to the released artwork.
+Code, data and figures for the Letter by Xinyan Wu and Qingqing Ji. The [manuscript index](01_paper/README.md) links the current Letter, Supplemental Material and Reproducibility Supplement (v6.2.3). The [figure index](02_figures/README_manifest.md) maps Figs. 1–4 and S1–S5 to the released artwork.
 
 Archived on Zenodo: concept DOI [10.5281/zenodo.24156133](https://doi.org/10.5281/zenodo.24156133), latest version DOI [10.5281/zenodo.24432803](https://doi.org/10.5281/zenodo.24432803) (v6.1.9).
 

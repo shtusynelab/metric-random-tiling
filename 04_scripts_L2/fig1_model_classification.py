@@ -126,7 +126,7 @@ def main():
     # uniform heavy black edges) ----
     specs = [
         (ASSETS / "G4_rth_colorful.png", AX_C, "3.4.6.4", 'c',
-         r"locked deficiency $\rightarrow$ thin $\mathbb{Z}$", r"$s_\infty$ = 0.040"),
+         r"locked deficiency $\rightarrow$ thin $\mathbb{Z}$", r"$s_2^{\rm fit} \simeq 0.040$"),
         (ASSETS / "31212_metric.png", AX_D, "3.12.12", 'd',
          r"split rows $\rightarrow$ mid-edge", r"$s_3 \approx 0.19$"),
         (ASSETS / "4612_metric.png", AX_E, "4.6.12", 'e',
