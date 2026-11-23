@@ -7,13 +7,13 @@ authors:
   - family-names: Ji
     given-names: Qingqing
     orcid: "https://orcid.org/0000-0002-4131-9237"
-version: v6.1.9
-date-released: "2026-11-22"
+version: v6.2.3
+date-released: "2026-11-23"
 license: MIT
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.24432803
-    description: Version-specific DOI for the v6.1.9 release snapshot (concept DOI: 10.5281/zenodo.24156133)
+    value: 10.5281/zenodo.24156133
+    description: Concept DOI for the metric-random-tiling archive (resolves to the latest version)
 repository-code: "https://github.com/shtusynelab/metric-random-tiling"
 abstract: "Exact counting, constructive certificates, ensemble generation and diffraction analysis for metric (edge-length) disorder on the eleven uniform tiling networks."
 keywords:
