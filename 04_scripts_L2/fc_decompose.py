@@ -104,10 +104,10 @@ def fill_map(loc, x0, y0):
 def engine_r(map601, gx, gy):
     return halo_anisotropy(map601[:, :Q_PIX], q1d, gx, gy)
 
-def raw_moments(loc_w, xs, ys, kpa, kpe, cx, cy):
-    """Fixed-center, no-background second moments (additive-valid)."""
-    rr = np.hypot(xs[:, None] - cx, ys[None, :] - cy)
-    m = (rr >= K_LO) & (rr <= K_HI)
+def raw_moments(loc_w, kpa, kpe, krr):
+    """Fixed-center (ideal spot), no-background second moments in the
+    halo-local frame k = q - G; additive-valid across components."""
+    m = (krr >= K_LO) & (krr <= K_HI)
     W = loc_w[m]
     kp, ke = kpa[m], kpe[m]
     Mpar = float((W * kp ** 2).sum())
@@ -144,10 +144,13 @@ for chain, npzf in chains:
         ix0, iy0 = int(round(cc + gx / dq)), int(round(cc + gy / dq))
         xs = (np.arange(ix0 - MARGIN, ix0 + MARGIN + 1) - cc) * dq
         ys = (np.arange(iy0 - MARGIN, iy0 + MARGIN + 1) - cc) * dq
-        kpa = xs[None, :] * (gx / np.hypot(gx, gy)) + ys[:, None] * (gy / np.hypot(gx, gy))
-        kpe = -xs[None, :] * (gy / np.hypot(gx, gy)) + ys[:, None] * (gx / np.hypot(gx, gy))
-        rr = np.hypot(xs[:, None] - gx, ys[:, None] - gy)
-        geo.append((ix0, iy0, xs, ys, kpa, kpe, rr))
+        KX, KY = np.meshgrid(xs - gx, ys - gy)   # k = q - G: halo-local frame
+        Gm = np.hypot(gx, gy)
+        ex, ey = gx / Gm, gy / Gm
+        kpa = KX * ex + KY * ey
+        kpe = -KX * ey + KY * ex
+        krr = np.hypot(KX, KY)
+        geo.append((ix0, iy0, xs, ys, kpa, kpe, krr))
     for c in range(NSHIFT):
         acc = [np.zeros((geo[s][2].size * geo[s][3].size,), dtype=complex) for s in range(6)]      # sum F
         accF2 = [np.zeros((geo[s][2].size * geo[s][3].size,), dtype=float) for s in range(6)]      # sum |F|^2
@@ -197,22 +200,27 @@ for chain, npzf in chains:
             res = {}
             for name, mp in [('tot', Itot), ('coh', Icoh), ('diff', Idiff), ('d1', Id1)]:
                 res[name] = engine_r(fill_map(mp, x0, y0), gx, gy)
-            # raw additive variant: fixed center at the ideal spot, no background
+            # additive variant: fixed ideal-spot center, k = q - G frame, no background
             M = {}
             for name, mp in [('tot', Itot), ('coh', Icoh), ('diff', Idiff), ('d1', Id1)]:
-                M[name] = raw_moments(mp, xs, ys, kpa, kpe, gx, gy)
-            mix_num = res['coh']['kperp2'] * M['coh'][2] + res['diff']['kperp2'] * M['diff'][2]
-            mix_den = res['coh']['kpar2'] * M['coh'][2] + res['diff']['kpar2'] * M['diff'][2]
+                M[name] = raw_moments(mp, kpa, kpe, krr)
+            # finite-sampling-corrected coherent map (E[I_coh] = I_coh + I_diff/M)
+            Ic_c = np.clip(Icoh - Idiff / (ncfg - 1), 0, None)
+            res['cohM'] = engine_r(fill_map(Ic_c, x0, y0), gx, gy)
+            M['cohM'] = raw_moments(Ic_c, kpa, kpe, krr)
+            mix = (M['coh'][1] + M['diff'][1]) / (M['coh'][0] + M['diff'][0])
             rows.append(dict(
                 chain=chain, c=c, spot=s,
                 r_tot=res['tot']['aniso'], r_coh=res['coh']['aniso'],
                 r_diff=res['diff']['aniso'], r_d1=res['d1']['aniso'],
+                r_cohM=res['cohM']['aniso'],
                 r_tot_raw=M['tot'][1] / M['tot'][0], r_coh_raw=M['coh'][1] / M['coh'][0],
+                r_cohM_raw=M['cohM'][1] / M['cohM'][0],
                 r_diff_raw=M['diff'][1] / M['diff'][0], r_d1_raw=M['d1'][1] / M['d1'][0],
+                w_coh=M['coh'][0] / (M['coh'][0] + M['diff'][0]),
+                mix_resid=M['tot'][1] / M['tot'][0] - mix,
                 Wsum_coh=M['coh'][2], Wsum_diff=M['diff'][2],
-                kpar2_coh=res['coh']['kpar2'], kpar2_diff=res['diff']['kpar2'],
-                Itot_sum=float(Itot.sum()), Idiff_sum=float(np.clip(Idiff, 0, None).sum()),
-                mix_pred=(mix_num / mix_den) if mix_den > 0 else np.nan))
+                Itot_sum=float(Itot.sum()), Idiff_sum=float(np.clip(Idiff, 0, None).sum())))
             pc_rows.append(dict(chain=chain, c=c, spot=s, mean_r_tot=float(np.mean(pc_r[s]))))
         mr = np.mean([r['r_tot'] for r in rows if r['chain'] == chain and r['c'] == c])
         md = np.mean([r['r_diff'] for r in rows if r['chain'] == chain and r['c'] == c])
