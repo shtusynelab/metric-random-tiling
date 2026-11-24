@@ -20,7 +20,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-BASE = Path(r'C:/Users/Tsing/Desktop/Group projects/MOFtronics/MOF pseudocrystals/metric-random-tiling')
+BASE = Path(__file__).resolve().parents[1]   # repo root (script lives in 04_scripts_L2)
 sys.path.insert(0, str(BASE / '04_scripts_L2'))
 sys.path.insert(0, str(BASE / '04_scripts_L2/external'))
 sys.path.insert(0, str(BASE / '06_engines/z3_hexagonal_P0'))
