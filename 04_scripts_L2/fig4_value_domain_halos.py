@@ -363,7 +363,7 @@ def main():
                      ecolor=COL[n], elinewidth=0.8, capthick=0.8,
                      capsize=2.8, zorder=3)
     axb.set_xlabel(r"relative dispersion $\sigma/\mu$")
-    axb.set_ylabel(r"$f_{\rm coh}=\langle|F\rangle|^2/H_{\rm ref}$")
+    axb.set_ylabel(r"$f_{\rm coh}=|\langle F\rangle|^2/H_{\rm ref}$")
     axb.tick_params(labelsize=6.5)
     axb2 = axb.twinx()
     hcl = sorted([n for n in ORD_B if n in rows and n != "b12"],

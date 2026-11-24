@@ -126,18 +126,18 @@ def main():
     # uniform heavy black edges) ----
     specs = [
         (ASSETS / "G4_rth_colorful.png", AX_C, "3.4.6.4", 'c',
-         r"locked deficiency $\rightarrow$ thin $\mathbb{Z}$", r"$s_2^{\rm fit} \simeq 0.040$"),
+         r"$s_2^{\rm fit} \simeq 0.040$"),
         (ASSETS / "31212_metric.png", AX_D, "3.12.12", 'd',
-         r"split rows $\rightarrow$ mid-edge", r"$s_3 \approx 0.19$"),
+         r"$s_3 \approx 0.19$"),
         (ASSETS / "4612_metric.png", AX_E, "4.6.12", 'e',
-         r"split rows $\rightarrow$ lattice", r"$s_2 \geq 0.186$ [strict]"),
+         r"$s_2 \geq 0.186$ [strict]"),
     ]
-    for path, t, nm, letter, mech, val in specs:
+    for path, t, nm, letter, val in specs:
         ax = fig.add_axes(rect(t))
         show(ax, load_img(path), tgt=1.0, tight=True)
         ax.text(0.5, 1.04, nm, transform=ax.transAxes, fontsize=7.0 * K,
                 ha='center', va='bottom', color='#1a1a1a')
-        ax.text(0.5, -0.045, mech + chr(10) + val, transform=ax.transAxes,
+        ax.text(0.5, -0.045, val, transform=ax.transAxes,
                 fontsize=7.0 * K, ha="center", va="top", color="#555555",
                 linespacing=1.35)
         fig_letter(fig, t, letter)

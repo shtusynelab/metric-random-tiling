@@ -59,7 +59,7 @@ EDGE_GRAY = '#3a3a3a'   # uniform edge gray (matches the Fig 1 gray skeleton;
 ALPHA_C = {'binary': '#2166ac', 'arithmetic': '#c0392b',
            'nonarith': '#e6811e'}
 ALPHA_LAB = {'binary': '{1, 2} (binary)', 'arithmetic': '{1, 2, 3} (arith.)',
-             'nonarith': '{1, 2, 4} (non-arith.)'}
+             'nonarith': '{1, 2, 4} (unequally spaced)'}
 ALPH_VALS = {'binary': (1, 2), 'arithmetic': (1, 2, 3),
              'nonarith': (1, 2, 4)}
 # width colors/markers (panel c width-scaling version; Ly7/9 are the
@@ -72,7 +72,7 @@ W_MK = {'Ly2': 'o', 'Ly3': 's', 'Ly5': '^', 'Ly7': 'D', 'Ly9': 'v'}
 LY = {'Ly2': 2, 'Ly3': 3, 'Ly5': 5, 'Ly7': 7, 'Ly9': 9}
 A_TAG = {'binary': '$\\{1,2\\}$ (binary)',
          'arithmetic': '$\\{1,2,3\\}$ (arith.)',
-         'nonarith': '$\\{1,2,4\\}$ (non-arith.)'}
+         'nonarith': '$\\{1,2,4\\}$ (unequally spaced)'}
 CMAP = plt.get_cmap('viridis')
 
 # ---------------- new-layout constants (inches) ----------------

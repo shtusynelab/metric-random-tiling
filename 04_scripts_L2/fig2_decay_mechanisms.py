@@ -120,7 +120,7 @@ def build_figure():
         axb.plot(F, dim * np.log(kk) / F, "_", ms=6 * K, mew=1.2 * K, color=col,
                  alpha=0.65)
     axb.plot([], [], "_", ms=6 * K, mew=1.2 * K, color="#333333",
-             label=r"rank bound $k^{\dim}$")
+             label=r"rank bound: $d\ln k/N_F$")
     axb.plot([12, 12], [0.455, 0.619], ls=":", lw=0.6, color="#888888",
              zorder=0.5)   # same N_F=12, two torus shapes (4,3)/(6,2) -> different s
     axb.set_xscale("log")
@@ -145,7 +145,7 @@ def build_figure():
     F_lam = lam.F.values.astype(float)        # torus W x W: F = 2W^2
     sf = lam.lnOmega_per_F.values.astype(float)
     axc.plot(F_lam, sf, "o-", ms=3.5 * K, lw=0.9 * K, color=C_SPLIT,
-             label=r"$\mathbb{Q}(\sqrt{2})$ lattice")
+             label=r"$\mathbb{Q}(\sqrt{2})$ alphabet")
     Fg = np.linspace(8, 50, 50)
     axc.plot(Fg, 2 * np.log(3) * np.sqrt(2) / np.sqrt(Fg), ls="--", lw=0.7 * K,
              color="#999999",
@@ -156,9 +156,8 @@ def build_figure():
     axc.set_xlabel(r"$N_F$")
     axc.set_ylabel(r"$s = \ln\Omega\,/\,N_F$")
     axc.tick_params(labelsize=7 * K)
-    axc.text(0.03, 0.06, r"4.8.8: $\Omega = 3^{4L}$ on $\mathbb{Z}$;"
-             r" $\dim_\Lambda = 2\dim_\mathbb{R}$", fontsize=7 * K,
-             transform=axc.transAxes, color=C_SPLIT)
+    axc.text(0.03, 0.06, r"4.8.8: $\Omega = 3^{4L}$ on $\mathbb{Z}$",
+             fontsize=7 * K, transform=axc.transAxes, color=C_SPLIT)
     img_inset(axc, ASSETS / "q488_faces.png", (0.54, 0.22, 0.43, 0.62))
     plabel(axc, "c")
 
