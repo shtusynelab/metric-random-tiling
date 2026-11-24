@@ -12,8 +12,8 @@ date-released: "2026-11-24"
 license: MIT
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.24467494
-    description: Concept DOI for the metric-random-tiling archive (version-specific DOI assigned per Zenodo release)
+    value: 10.5281/zenodo.24506525
+    description: Version-specific DOI for the v6.2.5 submission snapshot (concept DOI: 10.5281/zenodo.24156133)
 repository-code: "https://github.com/shtusynelab/metric-random-tiling"
 abstract: "Exact counting, constructive certificates, ensemble generation and diffraction analysis for metric (edge-length) disorder on the eleven uniform tiling networks."
 keywords:
