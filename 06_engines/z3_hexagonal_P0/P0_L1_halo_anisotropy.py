@@ -60,7 +60,11 @@ def ensemble_F(alphabet, seeds, n):
 
 def halo_anisotropy(I, q1d, gx, gy):
     """Single-spot halo anisotropy: spot-center localization (local argmax
-    correction) -> halo second moments."""
+    correction) -> halo second moments.
+    Note: the returned `aniso` is the intensity-weighted second-moment
+    RATIO sigma_perp^2 / sigma_par^2 (a variance ratio, not an RMS-width
+    ratio); `sigma_par` / `sigma_perp` are the RMS widths sqrt(spar) /
+    sqrt(sperp). Downstream papers quote `aniso` as r."""
     c = I.shape[0] // 2
     dq = q1d[1] - q1d[0]
     gx_pix, gy_pix = c + gx / dq, c + gy / dq
