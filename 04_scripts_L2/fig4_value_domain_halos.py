@@ -497,7 +497,7 @@ def main():
     axe.annotate("", xy=(34.4, YC), xytext=(29.9, YC),
                  arrowprops=dict(arrowstyle="->", color="#555555", lw=0.9))
     axe.text(32.35, YTXT,
-             r"tension $h$ biases edge lengths:  $p(l)\propto e^{-hl}$",
+             r"tension $h$ reweights configurations:  $P\propto e^{-h\Sigma_e \ell_e}$",
              fontsize=6.2, ha="center", va="center")
     axe.set_xlim(0, 65.1)
     axe.set_ylim(0, 35.5)
