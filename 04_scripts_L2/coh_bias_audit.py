@@ -56,6 +56,7 @@ for chain, npzf in [('prod', RAW / 'torus13_a123.npz'), ('rep', RAW / 'torus13_a
             bl = float(np.mean([np.hypot(*(pts[a] - pts[b])) for a, b in bonds]))
             Fs.append(F_six(pts / bl))
             rel.append(float(np.std(cfg) / np.mean(cfg)))
+        rel_alphabet = float(np.sqrt(2.0 / 3.0) / (2.0 + c))   # paper's DW proxy uses the nominal alphabet dispersion
         Farr = np.array(Fs)                       # (M, 6)
         mF = Farr.mean(axis=0)
         raw = np.abs(mF) ** 2
@@ -64,7 +65,9 @@ for chain, npzf in [('prod', RAW / 'torus13_a123.npz'), ('rep', RAW / 'torus13_a
         f_unb = float((unb / H_ref).mean())
         f_unb_spot = unb / H_ref
         rows.append(dict(chain=chain, c=c, f_coh_raw=f_raw, f_coh_unb=f_unb,
-                         unb_min=float(f_unb_spot.min()), rel_disp=float(np.mean(rel))))
+                         unb_min=float(f_unb_spot.min()),
+                         rel_disp_actual=float(np.mean(rel)),
+                         rel_disp_alphabet=rel_alphabet))
         print(f"{chain} c={c}: f_raw={f_raw:.6g} f_unb={f_unb:.6g} "
               f"(min spot {f_unb_spot.min():.3g}) rel={np.mean(rel):.3f}", flush=True)
 
@@ -78,7 +81,7 @@ for chain in ('prod', 'rep'):
     r_unb = g.f_coh_unb.iloc[6] / g.f_coh_unb.iloc[0]
     print(f"{chain}: endpoint ratio raw={r_raw:.1f} unbiased={r_unb:.1f}")
     # DW proxy: measured-to-predicted at each c; predicted = exp(-|G|^2 (sigma/mu)^2), |G|^2=52.638
-    pred = np.exp(-52.638 * g.rel_disp.values ** 2)
+    pred = np.exp(-52.638 * g.rel_disp_alphabet.values ** 2)   # paper convention: nominal alphabet dispersion
     print(f"  DW measured/predicted: raw={np.round(g.f_coh_raw.values/pred,2)}")
     print(f"  DW measured/predicted: unb={np.round(g.f_coh_unb.values/pred,2)}")
 print(f"total {time.time()-t0:.0f}s -> {out}", flush=True)
