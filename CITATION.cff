@@ -7,8 +7,8 @@ authors:
   - family-names: Ji
     given-names: Qingqing
     orcid: "https://orcid.org/0000-0002-4131-9237"
-version: v6.2.5
-date-released: "2026-11-24"
+version: v6.2.6
+date-released: "2026-11-26"
 license: MIT
 identifiers:
   - type: doi
